@@ -1,5 +1,4 @@
 import { useAuth } from '../../hooks/useAuth';
-import './styles.css';
 
 function UnauthenticatedApp() {
     const { login } = useAuth();
@@ -8,7 +7,7 @@ function UnauthenticatedApp() {
         <>
             <h2>Log in to join a chat room!</h2>
             <div>
-                <button onClick={login} className="login">
+                <button onClick={login}>
                     Login with Google
                 </button>
             </div>

@@ -7,10 +7,11 @@ function App() {
     const { user } = useAuth();
 
     return (
-        <div className="container">
-            <h1>💬 Chat Room</h1>
+        <div >
+            <h1>chat</h1>
             {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
         </div>
+
     );
 }
 

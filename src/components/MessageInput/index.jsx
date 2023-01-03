@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { sendMessage } from '../../services/firebase';
-import './styles.css';
 
 function MessageInput({ roomId }) {
     const { user } = useAuth();
@@ -24,11 +23,10 @@ function MessageInput({ roomId }) {
                 placeholder="Enter a message"
                 value={value}
                 onChange={handleChange}
-                className="message-input"
                 required
                 minLength={1}
             />
-            <button type="submit" disabled={value < 1} className="send-message">
+            <button type="submit" disabled={value < 1}>
                 Send
             </button>
         </form>
