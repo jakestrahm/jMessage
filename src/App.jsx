@@ -7,8 +7,7 @@ function App() {
     const { user } = useAuth();
 
     return (
-        <div >
-            <h1>chat</h1>
+        <div className="min-h-screen bg-slate-50">
             {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
         </div>
 

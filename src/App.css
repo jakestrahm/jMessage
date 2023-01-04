@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-primary {
+    @apply shadow-[0_7px_29px_0_rgba(100,100,111,0.2)];
+    @apply btn;
+    @apply bg-slate-50;
+    @apply text-stone-700;
+    @apply hover:bg-stone-700;
+    @apply hover:text-slate-50;
+    @apply border-none
+}
