@@ -11,3 +11,12 @@
     @apply hover:text-slate-50;
     @apply border-none
 }
+
+.outgoing-message {
+    background-color: #1982FC;
+    color: #e0e0e0;
+}
+.incoming-message {
+    background-color: #e9e9eb;
+    color: #242425;
+}

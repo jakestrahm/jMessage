@@ -2,7 +2,7 @@ const chatRooms = [
     { id: 'frontend', title: 'frontend' },
     { id: 'backend', title: 'backend' },
     { id: 'design', title: 'design' },
-    { id: 'devops', title: 'devops' },
+    { id: 'infra', title: 'infra' },
 ];
 
 export { chatRooms };

@@ -6,8 +6,9 @@ import './App.css';
 function App() {
     const { user } = useAuth();
 
+    // <div className="min-h-screen bg-slate-50">
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div>
             {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
         </div>
 
