@@ -7,10 +7,10 @@ function App() {
     const { user } = useAuth();
 
     return (
-        <div className="container">
-            <h1>💬 Chat Room</h1>
+        <div className="flex">
             {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
         </div>
+
     );
 }
 

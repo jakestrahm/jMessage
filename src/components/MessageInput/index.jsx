@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { sendMessage } from '../../services/firebase';
-import './styles.css';
 
 function MessageInput({ roomId }) {
     const { user } = useAuth();
@@ -18,20 +17,20 @@ function MessageInput({ roomId }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="message-input-container">
-            <input
-                type="text"
-                placeholder="Enter a message"
-                value={value}
-                onChange={handleChange}
-                className="message-input"
-                required
-                minLength={1}
-            />
-            <button type="submit" disabled={value < 1} className="send-message">
-                Send
-            </button>
-        </form>
+        <div className=" p-3 pb-4">
+            <form onSubmit={handleSubmit} className="input input-bordered w-full outline-none">
+                <input
+                    type="text"
+                    placeholder="jMessage"
+                    value={value}
+                    onChange={handleChange}
+                    required
+                    minLength={1}
+                />
+                <button type="submit" disabled={value < 1}>
+                </button>
+            </form>
+        </div>
     );
 }
 export { MessageInput };

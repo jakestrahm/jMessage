@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useMessages } from '../../hooks/useMessages';
-import './styles.css';
+// TODO wrap long messages.
 
 function MessageList({ roomId }) {
     const containerRef = React.useRef(null);
@@ -15,8 +15,8 @@ function MessageList({ roomId }) {
     });
 
     return (
-        <div className="message-list-container" ref={containerRef}>
-            <ul className="message-list">
+        <div ref={containerRef} className="bg-[#ffffff] p-4 overflow-y-auto">
+            <ul className="">
                 {messages.map((x) => (
                     <Message
                         key={x.id}
@@ -25,7 +25,7 @@ function MessageList({ roomId }) {
                     />
                 ))}
             </ul>
-        </div>
+        </div >
     );
 }
 
@@ -33,9 +33,9 @@ function Message({ message, isOwnMessage }) {
     const { displayName, text } = message;
 
     return (
-        <li className={['message', isOwnMessage && 'own-message'].join(' ')}>
-            <h4 className="sender">{isOwnMessage ? 'You' : displayName}</h4>
-            <div>{text}</div>
+        <li className={['chat', isOwnMessage == true ? 'chat-end' : 'chat-start'].join(' ')}>
+            <h4 className="chat-header">{isOwnMessage ? 'You' : displayName}</h4>
+            <div className={['break-words', 'chat-bubble', isOwnMessage ? 'outgoing-message' : 'incoming-message'].join(' ')}>{text}</div>
         </li>
     );
 }
