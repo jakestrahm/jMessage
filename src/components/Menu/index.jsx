@@ -1,13 +1,14 @@
 import { FaChevronLeft } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const Menu = ({ roomId }) => {
 
     return (
-        <div className="bg-[#f4f5fa] grid grid-cols-3 justify-between pt-3">
+        <div className="bg-[#f4f5fa] grid grid-cols-3 justify-between pt-0">
             {
                 //back button
             }
-            <button className='btn bg-inherit border-none text-[#0584ff] justify-start pt-6 hover:bg-inherit'><FaChevronLeft /></button>
+            <Link to="/" className='btn bg-inherit border-none text-[#0584ff] justify-start pt-6 hover:bg-inherit'><FaChevronLeft /></Link>
 
             {
                 //icon and name

@@ -2,7 +2,6 @@ import { Link, useParams } from 'react-router-dom';
 import { chatRooms } from '../../data/chatRooms';
 import { MessageInput } from '../MessageInput';
 import { MessageList } from '../MessageList';
-import { Tabs } from '../Tabs';
 import Menu from '../Menu';
 
 function ChatRoom() {
@@ -13,11 +12,11 @@ function ChatRoom() {
         // TODO 404
     }
 
-    return (
-        <div className="mockup-phone aspect-[9/19.5] p-0 h-screen">
-            <div className="camera"></div>
-            <Tabs active={room.id} />
+    console.log(chatRooms)
 
+    return (
+        <div className="mockup-phone aspect-[9/19.5] p-0 h-screen bg-[#f4f5fa]">
+            <div className="camera"></div>
             <div>
                 <Menu roomId={room.id} />
                 <MessageList roomId={room.id} />
