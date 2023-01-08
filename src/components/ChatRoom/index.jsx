@@ -14,7 +14,7 @@ function ChatRoom() {
     }
 
     return (
-        <div className="mockup-phone aspect-[9/19.5] p-0 ">
+        <div className="mockup-phone aspect-[9/19.5] p-0 h-screen">
             <div className="camera"></div>
             <Tabs active={room.id} />
 

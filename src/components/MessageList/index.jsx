@@ -15,7 +15,7 @@ function MessageList({ roomId }) {
     });
 
     return (
-        <div ref={containerRef} className="bg-[#ffffff] p-4">
+        <div ref={containerRef} className="bg-[#ffffff] p-4 overflow-y-auto">
             <ul className="">
                 {messages.map((x) => (
                     <Message
